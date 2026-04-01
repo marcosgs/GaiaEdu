@@ -1,0 +1,41 @@
+.client-page {
+	padding-top: clamp(16px, 3vw, 28px);
+}
+
+.hero-copy {
+	display: grid;
+	gap: 14px;
+	align-content: start;
+}
+
+.hero-copy h1 {
+	font-size: clamp(1.9rem, 5vw, 3.25rem);
+	line-height: 1.08;
+}
+
+.hero-copy p {
+	max-width: 58ch;
+	font-size: clamp(0.98rem, 2.1vw, 1.08rem);
+	line-height: 1.6;
+	color: rgba(239, 246, 255, 0.84);
+}
+
+.hero-panel {
+	align-self: end;
+	background: rgba(255, 255, 255, 0.14);
+	color: #eff6ff;
+}
+
+.hero-panel .section-heading {
+	margin-bottom: 14px;
+}
+
+.hero-panel h2 {
+	font-size: 1rem;
+}
+
+@media (max-width: 575px) {
+	.hero-copy h1 {
+		font-size: 1.8rem;
+	}
+}

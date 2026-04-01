@@ -1,0 +1,76 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Visao geral</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="page-shell">
+  <div class="page-stack client-page">
+    <section class="hero-card">
+      <span class="page-eyebrow">Plataforma educacional</span>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>Uma interface unica para navegador, Android e dispositivos Apple.</h1>
+          <p>
+            O tema agora se adapta a diferentes larguras, orientacoes e areas seguras para manter leitura,
+            navegacao e toque consistentes em celular, tablet e desktop.
+          </p>
+        </div>
+
+        <div class="hero-side panel-card hero-panel">
+          <div class="section-heading">
+            <h2>Disponivel em</h2>
+          </div>
+          <div class="chip-row">
+            <span class="app-chip" *ngFor="let device of devices">{{ device }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card" *ngFor="let card of summaryCards">
+        <span class="muted">{{ card.title }}</span>
+        <strong class="metric">{{ card.value }}</strong>
+        <p class="muted">{{ card.description }}</p>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel-card">
+        <div class="section-heading">
+          <h2>Melhorias de responsividade</h2>
+        </div>
+        <ul class="feature-list">
+          <li *ngFor="let highlight of highlights">
+            <span class="list-icon">
+              <ion-icon name="checkmark"></ion-icon>
+            </span>
+            <p>{{ highlight }}</p>
+          </li>
+        </ul>
+      </article>
+
+      <article class="panel-card">
+        <div class="section-heading">
+          <h2>Proximos eventos</h2>
+        </div>
+        <ul class="timeline-list">
+          <li *ngFor="let event of nextEvents">
+            <span class="list-icon">
+              <ion-icon name="time-outline"></ion-icon>
+            </span>
+            <div>
+              <strong>{{ event.title }}</strong>
+              <p class="muted">{{ event.detail }}</p>
+              <span class="muted">{{ event.time }}</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </div>
+</ion-content>

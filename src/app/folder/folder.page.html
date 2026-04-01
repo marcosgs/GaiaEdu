@@ -1,0 +1,95 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="page-shell">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="page-stack folder-page">
+    <section class="hero-card">
+      <span class="page-eyebrow">{{ content.eyebrow }}</span>
+      <div class="hero-grid">
+        <div class="folder-hero-copy">
+          <h1>{{ content.title }}</h1>
+          <p>{{ content.description }}</p>
+        </div>
+
+        <div class="panel-card folder-hero-panel">
+          <div class="section-heading">
+            <h2>Compativel com</h2>
+          </div>
+          <div class="chip-row">
+            <span class="app-chip">Web responsiva</span>
+            <span class="app-chip">Android</span>
+            <span class="app-chip">iPhone</span>
+            <span class="app-chip">iPad</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card" *ngFor="let metric of content.metrics">
+        <span class="muted">{{ metric.title }}</span>
+        <strong class="metric">{{ metric.value }}</strong>
+        <p class="muted">{{ metric.description }}</p>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel-card lessons-panel">
+        <div class="section-heading">
+          <h2>{{ folder }}</h2>
+        </div>
+
+        <ul class="timeline-list">
+          <li *ngFor="let item of content.items">
+            <span class="list-icon">
+              <ion-icon name="albums-outline"></ion-icon>
+            </span>
+            <div>
+              <strong>{{ item.title }}</strong>
+              <p class="muted">{{ item.description }}</p>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <article class="panel-card info-panel">
+        <div class="section-heading">
+          <h2>O que mudou no tema</h2>
+        </div>
+
+        <ul class="feature-list">
+          <li>
+            <span class="list-icon">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </span>
+            <p>Espacamentos fluidos para telas pequenas, medias e largas.</p>
+          </li>
+          <li>
+            <span class="list-icon">
+              <ion-icon name="expand-outline"></ion-icon>
+            </span>
+            <p>Cards e grids com quebra automatica sem depender de largura fixa.</p>
+          </li>
+          <li>
+            <span class="list-icon">
+              <ion-icon name="scan-outline"></ion-icon>
+            </span>
+            <p>Respeito a safe areas para barras e bordas de dispositivos Apple.</p>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </div>
+</ion-content>

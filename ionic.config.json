@@ -1,0 +1,7 @@
+{
+  "name": "GaiaEdu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

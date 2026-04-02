@@ -1,0 +1,40 @@
+ion-menu-button {
+  color: var(--ion-color-primary);
+}
+
+.folder-page {
+  padding-top: clamp(16px, 3vw, 28px);
+}
+
+.folder-hero-copy {
+  display: grid;
+  gap: 14px;
+}
+
+.folder-hero-copy h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.1;
+}
+
+.folder-hero-copy p {
+  max-width: 58ch;
+  font-size: clamp(0.98rem, 2vw, 1.05rem);
+  line-height: 1.6;
+  color: rgba(239, 246, 255, 0.84);
+}
+
+.folder-hero-panel {
+  align-self: end;
+  background: rgba(255, 255, 255, 0.14);
+  color: #eff6ff;
+}
+
+.folder-hero-panel .section-heading {
+  margin-bottom: 14px;
+}
+
+.lessons-panel strong,
+.info-panel strong {
+  display: block;
+  margin-bottom: 4px;
+}
